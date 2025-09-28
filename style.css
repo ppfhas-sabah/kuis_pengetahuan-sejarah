@@ -1,0 +1,205 @@
+/* RESET DASAR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f7f6; /* Warna latar belakang lembut */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTAINER UTAMA LAYAR (Untuk transisi antar halaman) */
+.screen {
+    width: 100%;
+    max-width: 450px; /* Ukuran ideal untuk tampilan mobile */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.screen.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ################### 1. START SCREEN ################### */
+.title-main {
+    color: #007bff; /* Warna biru pondok */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.animated-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#initial-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+#initial-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.start-button, .submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; /* Warna hijau keren */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+.start-button:hover, .submit-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.info-text {
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* ################### 2. QUIZ SCREEN ################### */
+.header-quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.question-slide-container {
+    min-height: 200px;
+    transition: opacity 0.3s ease-out; /* Animasi fade-out saat ganti soal */
+}
+
+.question-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.option {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1em;
+    text-align: left;
+}
+
+/* Animasi Hover/Pilihan */
+.option:hover {
+    background-color: #e9ecef;
+}
+
+.option.selected {
+    border-color: #007bff;
+    background-color: #e6f0ff;
+}
+
+.navigation-quiz {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.nav-button {
+    padding: 12px 25px;
+    background-color: #ffc107; /* Kuning cerah */
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.nav-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ################### 3. RESULT SCREEN ################### */
+.result-title {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.result-box {
+    padding: 20px;
+    background-color: #e6f0ff;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.detail-heading {
+    margin-top: 20px;
+    color: #007bff;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+.correct-list {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    word-wrap: break-word; 
+}
+
+.thanks-message {
+    text-align: center;
+    margin-top: 10px; /* Jarak lebih dekat dengan tombol keluar */
+    color: #6c757d;
+}
