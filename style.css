@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f4f7f6; /* Warna latar belakang lembut */
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
     color: #333;
     display: flex;
     justify-content: center;
@@ -16,17 +16,17 @@ body {
     padding: 20px;
 }
 
-/* CONTAINER UTAMA LAYAR (Untuk transisi antar halaman) */
+/* CONTAINER UTAMA LAYAR */
 .screen {
     width: 100%;
-    max-width: 450px; /* Ukuran ideal untuk tampilan mobile */
+    max-width: 450px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 30px;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .screen.active {
@@ -38,9 +38,9 @@ body {
     display: none;
 }
 
-/* ################### 1. START SCREEN ################### */
+/* START SCREEN */
 .title-main {
-    color: #007bff; /* Warna biru pondok */
+    color: #007bff;
     text-align: center;
     margin-bottom: 5px;
 }
@@ -74,7 +74,7 @@ body {
 .start-button, .submit-button {
     width: 100%;
     padding: 15px;
-    background-color: #28a745; /* Warna hijau keren */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 8px;
@@ -90,6 +90,10 @@ body {
     transform: translateY(-2px);
 }
 
+.start-button:active, .nav-button:active {
+    transform: scale(0.97);
+}
+
 .info-text {
     text-align: center;
     color: #999;
@@ -97,7 +101,7 @@ body {
     font-size: 0.9em;
 }
 
-/* ################### 2. QUIZ SCREEN ################### */
+/* QUIZ SCREEN */
 .header-quiz {
     display: flex;
     justify-content: space-between;
@@ -111,7 +115,7 @@ body {
 
 .question-slide-container {
     min-height: 200px;
-    transition: opacity 0.3s ease-out; /* Animasi fade-out saat ganti soal */
+    transition: opacity 0.3s ease-out;
 }
 
 .question-text {
@@ -134,7 +138,6 @@ body {
     text-align: left;
 }
 
-/* Animasi Hover/Pilihan */
 .option:hover {
     background-color: #e9ecef;
 }
@@ -151,7 +154,7 @@ body {
 
 .nav-button {
     padding: 12px 25px;
-    background-color: #ffc107; /* Kuning cerah */
+    background-color: #ffc107;
     color: #333;
     border: none;
     border-radius: 8px;
@@ -166,12 +169,11 @@ body {
     opacity: 0.6;
 }
 
-/* ################### 3. RESULT SCREEN ################### */
+/* RESULT SCREEN */
 .result-title {
     color: #28a745;
     text-align: center;
     margin-bottom: 20px;
-    position: relative;
 }
 
 .result-box {
@@ -198,8 +200,12 @@ body {
     word-wrap: break-word; 
 }
 
+#menu-button {
+    margin-bottom: 10px;
+}
+
 .thanks-message {
     text-align: center;
-    margin-top: 10px; /* Jarak lebih dekat dengan tombol keluar */
+    margin-top: 10px;
     color: #6c757d;
 }
