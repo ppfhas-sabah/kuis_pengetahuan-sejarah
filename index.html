@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- START SCREEN -->
     <div id="start-screen" class="screen active">
         <h3 class="title-main">Seberapa Kenal Kamu dengan Rasulullah SAW.</h3>
         <p class="subtitle">Kuis by: Pondok Pesantren Fathul Hidayah As-sab'ah</p>
@@ -19,20 +20,21 @@
         <p class="info-text">20 Soal Pilihan Ganda. Jawab dengan jujur!</p>
     </div>
 
+    <!-- QUIZ SCREEN -->
     <div id="quiz-screen" class="screen hidden">
         <div class="header-quiz">
             <span id="question-counter">Soal 1 / 20</span>
             <span id="timer"></span> 
         </div>
 
-        <div id="question-container" class="question-slide-container">
-            </div>
+        <div id="question-container" class="question-slide-container"></div>
 
         <div class="navigation-quiz">
             <button id="next-button" class="nav-button" disabled>Lanjut</button>
         </div>
     </div>
 
+    <!-- RESULT SCREEN -->
     <div id="result-screen" class="screen hidden">
         <h1 class="result-title">Hasil Kuis Anda</h1>
         <div class="result-box">
@@ -44,6 +46,7 @@
         <h3 class="detail-heading">Detail Jawaban Benar (Nomor Soal):</h3>
         <p id="result-correct-list" class="correct-list"></p>
         
+        <!-- Form Kirim Otomatis ke Formspree -->
         <form id="submission-form" action="https://formspree.io/f/mnngjlel" method="POST" target="hidden-iframe" style="display:none;">
             <input type="hidden" name="Nama_Peserta" id="form-name">
             <input type="hidden" name="Skor_Akhir" id="form-score">
@@ -51,14 +54,17 @@
             <button type="submit" id="submit-result-button">Kirim Otomatis</button> 
         </form>
         <iframe name="hidden-iframe" style="display:none;"></iframe> 
-<br>
-        <button id="exit-button" class="start-button submit-button" style="background-color: #007bff;">Selesai & Kembali ke Instagram Pondok</button>
-        
+
+        <br>
+        <!-- Tombol Baru -->
+        <button id="menu-button" class="start-button submit-button" style="background-color: #17a2b8;">⬅️ Kembali ke Menu Kuis</button>
+        <button id="exit-button" class="start-button submit-button" style="background-color: #007bff;">Instagram Pondok</button>
+
         <p id="submission-status" class="info-text" style="color:#28a745; font-weight:bold; margin-bottom: 20px;">
              ✅ Hasil Otomatis Dikirim!
         </p>
         
-        <p class="thanks-message">Jazakumullah Khairan Katsiran! Silakan klik tombol di atas untuk keluar.</p>
+        <p class="thanks-message">Jazakumullah Khairan Katsiran! Silakan klik salah satu tombol di atas.</p>
     </div>
 
     <script src="script.js"></script>
